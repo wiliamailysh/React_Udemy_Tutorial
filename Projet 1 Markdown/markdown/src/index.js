@@ -1,6 +1,10 @@
 import React from 'react';
 import { render } from 'react-dom';
 
+// class
+import './style/css/bootstrap.min.css';
+import './index.css';
+
 class App extends React.Component {
   render() {
     return (
