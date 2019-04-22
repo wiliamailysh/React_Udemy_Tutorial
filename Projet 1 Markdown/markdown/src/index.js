@@ -25,6 +25,11 @@ class App extends React.Component {
     // this.setState({text});
   }
 
+  renderText = (text) => {
+    const renderText = marked(text, {sanitize: true})
+    return { __html: renderText };
+  }
+
   render() {
     return (
       <div className="container">
@@ -38,7 +43,7 @@ class App extends React.Component {
             </textarea>
           </div>
           <div className="col-sm-6">
-            <div>{this.state.text}</div>
+            <div dangerouslySetInnerHTML={this.renderText(this.state.text)} />
           </div>
         </div>
       </div>
