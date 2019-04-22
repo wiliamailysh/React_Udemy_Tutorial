@@ -8,6 +8,9 @@ import './index.css';
 // Personal Javascript file with sampleText
 import { sampleText } from './sampleText';
 
+// Import Marked.js library
+import marked from 'marked';
+
 
 // Component
 class App extends React.Component {
