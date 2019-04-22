@@ -4,7 +4,16 @@ import { render } from 'react-dom';
 class App extends React.Component {
   render() {
     return (
-      <h1>Hello World</h1>
+      <div className="container">
+        <div className="row">
+          <div className="col-sm-6">
+            <textarea value="Tapez votre texte" cols="30" rows="10"></textarea>
+          </div>
+          <div className="col-sm-6">
+            <h1>Résultat</h1>
+          </div>
+        </div>
+      </div>
     )
   }
 }
