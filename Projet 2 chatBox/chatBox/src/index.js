@@ -7,9 +7,10 @@ import './index.css';
 
 // Components
 import Connexion from './components/Connexion';
+import App from './components/App';
 
 
 render(
-  <Connexion />,
+  <App />,
   document.getElementById('root')
 )
