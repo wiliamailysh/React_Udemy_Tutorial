@@ -6,7 +6,7 @@ import { render } from 'react-dom';
 import './index.css';
 
 // Rooter
-import { BrowserRouter, Match, Miss } from 'react-router';
+import { BrowserRouter, Route, Switch } from 'react-router';
 
 // Components
 import Connexion from './components/Connexion';
@@ -18,13 +18,14 @@ const Root = () => {
   return (
     <BrowserRouter>
       <div>
-        <Match exactly pattern="/" component={Connexion} />
-        <Match pattern="/pseudo/:pseudo" component={App} />
-        <Miss component={NotFound} />
+        <Route exactly path='/' component={Connexion} />
+        <Route path='/pseudo/:pseudo' component={App} />
+        <Route component={NotFound} />
       </div>
     </BrowserRouter>
   )
 }
+
 
 render(
   <Root />,
